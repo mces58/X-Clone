@@ -8,8 +8,8 @@
     "prettier:client": "cd client && npx prettier --write .",
     "lint:server": "cd server && npx eslint --fix .",
     "lint:client": "cd client && npx eslint --fix .",
-    "server": "cd server && npm dev",
-    "client": "cd client && npm start",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
     "install:all": "npm install && cd client && npm install && cd .. && cd server && npm install"
   },
   "keywords": [],
