@@ -1,0 +1,24 @@
+{
+  "name": "x-clone",
+  "version": "1.0.0",
+  "description": "This is a clone of the x project",
+  "scripts": {
+    "prepare": "husky",
+    "prettier:server": "cd server && npx prettier --write .",
+    "prettier:client": "cd client && npx prettier --write .",
+    "lint:server": "cd server && npx eslint --fix .",
+    "lint:client": "cd client && npx eslint --fix .",
+    "server": "cd server && npm dev",
+    "client": "cd client && npm start",
+    "install:all": "npm install && cd client && npm install && cd .. && cd server && npm install"
+  },
+  "keywords": [],
+  "author": "Mehmetcan ESER",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7"
+  }
+}

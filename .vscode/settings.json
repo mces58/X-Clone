@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "node_modules": true
+  },
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  "eslint.enable": true,
+  "eslint.run": "onSave",
+  "prettier.requireConfig": true
+}
