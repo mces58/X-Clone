@@ -1,7 +1,17 @@
-import userController from 'src/controller/user.controller';
-import connectDB from 'src/db/connect.db';
+import cookieParser from 'cookie-parser';
+import express from 'express';
 
-connectDB();
-userController();
+import connectMongo from 'src/db/mongo.db';
+import authRoutes from 'src/routes/auth.route';
 
-console.log('Server-side code running');
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+
+app.use('/api/auth', authRoutes);
+
+app.listen(5000, () => {
+  console.log('Server is running on port 5000');
+  connectMongo();
+});
